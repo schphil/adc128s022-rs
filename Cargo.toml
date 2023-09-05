@@ -1,0 +1,36 @@
+[package]
+name = "adc128s022"
+version = "0.1.0"
+authors = ["Philipp Scheff <philippscheff@me.com>"]
+repository = "https://github.com/schphil/adc128s022-rs"
+license = "MIT OR Apache-2.0"
+description = "Platform agnostic driver written using embedded-hal traits to interface with the ADC128S022 ADC's"
+readme = "README.md"
+keywords = ["embedded-hal-driver", "adc"]
+categories = ["embedded", "hardware-support", "no-std"]
+homepage = "https://github.com/schphil/adc128s022-rs"
+documentation = "https://docs.rs/adc128s022"
+edition = "2021"
+include = [
+    "/**/*.rs",
+    "/Cargo.toml",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/LICENSE-MIT",
+    "/LICENSE-APACHE",
+]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+embedded-hal = "1.0.0-rc.1"
+embedded-hal-async = { version = "1.0.0-rc.1", optional = true }
+
+[dev-dependencies]
+#embedded-hal-mock = { git = "https://github.com/dbrgn/embedded-hal-mock", branch="1-alpha" }
+
+[features]
+async = ["embedded-hal-async"]
+
+[profile.release]
+lto = true

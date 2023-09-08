@@ -31,7 +31,7 @@ fn main() {
 
 For questions, issues, feature requests like compatibility with similar devices
 and other changes, please file an
-[issue in the github project](https://github.com/schphil/adc128s022/issues).
+[issue in the github project](https://github.com/schphil/adc128s022-rs/issues).
 
 ## License
 

@@ -82,7 +82,7 @@ where
 
         self.cs.set_high();
 
-        let r = (((read[1] as u16) << 8) | (read[2] as u16)) & 0xFFF;
+        let r = (((read[0] as u16) << 8) | (read[1] as u16)) & 0xFFF;
 
         Ok(r)
     }
